@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+
+    h1 {
+        margin: 0px;
+        font-size: 48px / 16px * 1rem ;
+        text-align: center;
+    }
+
+    p {
+        padding: 3rem;
+        margin: 0;
+    }
+}
+span[data-descr]{
+    position: relative;
+    color: rgb(238, 14, 14);
+    cursor: pointer;
+
+
+ &:hover::after{
+    content: attr(data-descr);
+    position: absolute;
+    width: 10rem;
+    height: 3.5rem;
+    top: 8px;
+    left: 38px;
+    background-color: rgba(7, 6, 6, 0.842);
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+}
+}
+.main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2%;
+    
+    
+
+    img {
+        background-color: rgb(83, 149, 235);
+        margin: 0;
+        border-radius: 2%;
+        box-shadow: 0.0625rem 0.0625rem 0.325rem 0.0625rem rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        display: flex;
+        margin: 0;
+        height: 6vh;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        color: rgb(41, 39, 39);
+        background-color: rgb(229, 236, 236);
+        border-radius: 3%;
+        box-shadow: 0.0625rem 0.0625rem 0.325rem 0.0625rem rgba(0,0,0,0.2);
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(20px, auto));
+        grid-template-rows: repeat(auto, minmax(20px, auto));
+        column-gap: 2rem;
+        row-gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 990px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(20px, auto));
+        grid-template-rows: repeat(auto, minmax(20px, auto));
+        column-gap: 2rem;
+        row-gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 659px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(20px, auto));
+        grid-template-rows: repeat(auto, minmax(20px, auto));
+        column-gap: 2rem;
+        row-gap: 2rem;
+        padding: 2rem;
+    }
+}
+
